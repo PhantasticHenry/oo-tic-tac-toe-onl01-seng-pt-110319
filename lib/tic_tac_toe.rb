@@ -36,30 +36,23 @@ class TicTacToe
     end
     
   def position_taken?(position)
-    if @board[position] == " "
-      false
-    else
-      true 
-    end
+    @board[position] == " "
   end
   
   def valid_move?(position)
-    # if position.between?(0, 8) && @board[position] == " "
-    if position.between?(0, 8) && !position_taken?(position)
-      true 
-    else 
-      false 
-    end
+    # position.between?(0, 8) && @board[position] == " "
+    position.between?(0, 8) && !position_taken?(position)
   end
   
   def turn_count
-    counter = 0 
-    @board.each do |slot|
-      if slot == "X" || slot == "O"
-        counter += 1
-      end
-    end
-    counter
+    # counter = 0 
+    # @board.each do |slot|
+    #   if slot == "X" || slot == "O"
+    #     counter += 1
+    #   end
+    # end
+    # counter
+    
   end
   
   def current_player 
